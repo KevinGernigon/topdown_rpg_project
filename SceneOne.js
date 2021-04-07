@@ -1,9 +1,9 @@
 var player;
 var cursors;
 
-class sceneOne extends Phaser.Scene{
+class SceneOne extends Phaser.Scene{
     constructor(){
-        super({key: "sceneOne"});
+        super("sceneOne");
     }
     init(data){
     }
@@ -25,13 +25,13 @@ class sceneOne extends Phaser.Scene{
         player = this.physics.add.sprite(300, 300, 'player');
 
         this.physics.add.collider(player, bloquant);
-        this.physics.add.overlap(player, zone, changementZone);
+        this.physics.add.overlap(player, zone, changementZone, null, this);
 
         cursors = this.input.keyboard.createCursorKeys();
         
         function changementZone(player, zone){
             if (player.y >= 730 && player.x >= 400 && player.x <= 560){
-                this.scene.start('sceneTwo');
+                this.scene.start("sceneTwo");
                 console.log("changement");
             }
         }
@@ -54,8 +54,4 @@ class sceneOne extends Phaser.Scene{
             player.setVelocity(0);
         }
     }
-};
-
-/*function changementZone(player, zone){
-    
-}*/    
+}

@@ -1,9 +1,9 @@
 var player;
 var cursors;
 
-class sceneTwo extends Phaser.Scene{
+class SceneTwo extends Phaser.Scene{
     constructor(){
-        super({key: "sceneTwo"});
+        super("sceneTwo");
     }
     init(data){
     }
@@ -47,4 +47,4 @@ class sceneTwo extends Phaser.Scene{
             player.setVelocity(0);
         }
     }
-};
+}
