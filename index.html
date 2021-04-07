@@ -1,0 +1,39 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <script src="map_1_placeholder.js"></script>
+    <script src="map_2_placeholder.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var config = {
+    type: Phaser.AUTO,
+    parent: "game",
+    width: 1216,
+    height: 768,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: true
+        }
+    },
+    scene: [sceneOne, sceneTwo]
+};
+
+var game = new Phaser.Game(config);
+
+</script>
+
+</body>
+</html>
